@@ -10,7 +10,12 @@
 
     <div class="row mb-3">
         <div class="col text-center">
-            <h2>{{this.first_name}} {{this.last_name}}</h2>
+            <h2>
+                {{#if this.is_starred}}
+                <i class="bi bi-star-fill text-primary"></i>
+                {{/if}}
+                {{this.first_name}} {{this.last_name}}
+            </h2>
         </div>
     </div>
 

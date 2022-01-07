@@ -5,9 +5,17 @@
 </div>
 {{/if}}
 
+{{#if userStarred}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{userStarred}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
 <div class="row">
     <div class="col-6"><h1>Users</h1></div>
     <div class="col-6 d-flex justify-content-end">
+        <a href="/starred" type="button" class="btn btn-primary align-self-center m-2 bi bi-star"> Starred Users</a><br>
         <a href="/adduser" type="button" class="btn btn-primary align-self-center bi bi-person-plus-fill"> Add User</a>
     </div>
 </div>
@@ -29,16 +37,21 @@
 
         {{#each rows}}
 
+        {{#if this.is_starred}}
+        <tr class="table-primary">
+        {{else}}
         <tr>
+        {{/if}}
             <th scope="row">{{this.id}}</th>
             <td>{{this.first_name}}</td>
             <td>{{this.last_name}}</td>
             <td>{{this.email}}</td>
             <td>{{this.phone}}</td>
             <td class="text-end">
-                <a href="/viewuser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
-                <a href="/edituser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
-                <a href="/deleteuser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
+                <a href="/staruser/{{this.id}}" type="button" class="btn btn-outline-primary btn-small" data-toggle="tooltip" title="Star/Unstar"><i class="bi bi-star"></i></a>
+                <a href="/viewuser/{{this.id}}" type="button" class="btn btn-light btn-small" data-toggle="tooltip" title="View user"><i class="bi bi-eye"></i></a>
+                <a href="/edituser/{{this.id}}" type="button" class="btn btn-light btn-small" data-toggle="tooltip" title="Edit user"><i class="bi bi-pencil"></i></a>
+                <a href="/deleteuser/{{this.id}}" type="button" class="btn btn-danger btn-small" data-toggle="tooltip" title="Delete user"><i class="bi bi-person-x"></i></a>
             </td>
         </tr>
 

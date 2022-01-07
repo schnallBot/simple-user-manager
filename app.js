@@ -1,4 +1,4 @@
-// requires
+// dependencies
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
@@ -9,7 +9,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT;
 
-// Parsing middleware
+// middleware
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
