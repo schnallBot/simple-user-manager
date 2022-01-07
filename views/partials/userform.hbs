@@ -1,0 +1,26 @@
+<div class="form-floating col-6">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}" placeholder="Josh" name="first_name" required>
+    <label for="floatingInput">First Name</label>
+</div>
+<div class="form-floating col-6">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.last_name}}" placeholder="Ho" name="last_name" required>
+    <label for="floatingInput">Last Name</label>
+</div>
+
+<div class="form-floating col-6">
+    <input type="email" class="form-control" id="floatingInput" value="{{this.email}}" placeholder="josh@homail.com" name="email" required>
+    <label for="floatingInput">Email</label>
+</div>
+<div class="form-floating col-6">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="123 456 7890" name="phone" required>
+    <label for="floatingInput">Phone</label>
+</div>
+
+<div class="form-floating col-12">
+    <textarea class="form-control" id="floatingInput" placeholder="The best employee ever!" name="comments" style="height: 200px;">{{this.comments}}</textarea>
+    <label for="floatingInput">Comments</label>
+</div>
+
+<div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</div>
