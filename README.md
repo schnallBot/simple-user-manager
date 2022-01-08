@@ -1,7 +1,7 @@
-# SUMS - Simple User Manager
+# SUMS - Simple User Management System
 ![homepage](img-homepage.png)
 
-SUMS is just that -- a simple user manager. It currently supports:
+SUMS is just that -- a simple user management system. It currently supports:
 - Viewing all users in the database
 - Searching for users by name
 - Adding a user
